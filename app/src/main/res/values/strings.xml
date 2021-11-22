@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">Watermark KTP</string>
+
+
+    <string-array name="PilihPosisi">
+        <item>--Pilih--</item>
+        <item>Atas Tengan</item>
+        <item>Atas Kiri</item>
+        <item>Atas Kanan</item>
+        <item>Tengah</item>
+        <item>Tengah Kiri</item>
+        <item>Tengah Kanan</item>
+        <item>Bawah Kiri</item>
+        <item>Bawah Tengah</item>
+        <item>Bawah Kanan</item>
+
+    </string-array>
 </resources>
