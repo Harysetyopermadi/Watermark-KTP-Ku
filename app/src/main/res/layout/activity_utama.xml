@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
+    tools:context=".Utama">
     <ScrollView
         android:layout_above="@id/ltbawah"
         android:layout_width="match_parent"
@@ -35,6 +34,12 @@
                     android:layout_centerInParent="true"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"/>
+                <ImageView
+                    android:id="@+id/imageView_watermark"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3"
+                    android:visibility="gone" />
             </RelativeLayout>
 
             <com.google.android.material.button.MaterialButton
@@ -61,6 +66,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <EditText
+                    android:id="@+id/isitext"
                     android:hint="Verifikasi Toko Online"
                     android:layout_marginTop="5dp"
                     android:layout_marginRight="5dp"
@@ -107,23 +113,45 @@
 
         </LinearLayout>
     </ScrollView>
-<RelativeLayout
-    android:id="@+id/ltbawah"
-    android:paddingTop="5dp"
-    android:paddingBottom="5dp"
-    android:layout_alignParentBottom="true"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_save"
+    <LinearLayout
+        android:id="@+id/ltbawah"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
-        android:text="Simpan Foto Ke Galeri"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content">
 
-</RelativeLayout>
+        <LinearLayout
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:id="@+id/btnaddtext"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:text="Add Text"
+                android:layout_height="wrap_content"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnleartext"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:text="Clear Text"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
 
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_save"
+            android:layout_width="match_parent"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:text="Simpan Foto Ke Galeri"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
 
 </RelativeLayout>
